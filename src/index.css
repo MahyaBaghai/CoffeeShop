@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+
+  --color-brown-100: #ECE0D1;
+  --color-brown-300: #DBC1AC;
+  --color-brown-600: #967259;
+  --color-brown-900: #634832;
+
+  --radius-5xl:2rem;
+
+  --shadow-normal: 0px 1px 10px 0px rgba(0, 0, 0, 0.05);
+
+  --font-Oswald: 'Oswald';
+  --font-Tagesschrift: 'Tagesschrift';
+
+  --font-VolkhovBold: 'VolkhovBold';
+  --font-VolkhovRegular: 'VolkhovRegular';
+
+  --font-PoppinsRegular: 'PoppinsRegular';
+  --font-PoppinsMedium: 'PoppinsMedium';
+  --font-PoppinsBold: 'PoppinsBold';
+
+  --breakpoint-xmd: 52rem;
+  --breakpoint-xs: 33rem;
+  --breakpoint-2xs: 27rem;
+  --breakpoint-3xs: 18rem;
+  --breakpoint-2md: 61.5rem;
+  --breakpoint-2lg: 77.5rem;
+
+  --container-8xl: 82rem;
+
+}
+@font-face {
+  font-family: VolkhovRegular;
+  font-display: swap;
+  src: url("../fonts/Volkhov/Volkhov-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: VolkhovBold;
+  font-display: swap;
+  src: url("../fonts/Volkhov/Volkhov-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: PoppinsRegular;
+  font-display: swap;
+  src: url("../fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: PoppinsMedium;
+  font-display: swap;
+  src: url("../fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: PoppinsBold;
+  font-display: swap;
+  src: url("../fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Tagesschrift;
+  font-display: swap;
+  src: url("../fonts/Tagesschrift/Tagesschrift-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: Oswald;
+  font-display: swap;
+  src: url("../fonts/Oswald/Oswald-Regular.ttf") format("truetype");
+}
+
+
+@layer components{
+  .sectionTitle{
+    @apply font-VolkhovBold lg:text-3xl md:text-2xl text-xl font-medium italic 
+  }
+  .sectionSubtitle{
+    @apply font-VolkhovRegular lg:text-lg md:text-base text-sm font-light italic mt-1.5
+  }
+  .sectionLink{
+    @apply font-PoppinsRegular lg:text-base md:text-sm text-xs font-normal text-orange-300 flex items-center justify-end
+    hover:p-2 hover:bg-orange-200/20 hover:rounded-md hover:pr-1.5 cursor-pointer transition-all duration-300
+  }
+  .sectionLinkIcon{
+    @apply w-5 h-5
+  }
+  
+}

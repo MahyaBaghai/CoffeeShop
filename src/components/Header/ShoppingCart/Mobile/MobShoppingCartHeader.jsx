@@ -1,0 +1,26 @@
+import { HiXMark } from "react-icons/hi2";
+
+export default function MobShoppingCartHeader({dark, closeShoppingCartInMobile}) {
+  return (
+    <>
+    <div
+        className={`flex justify-between items-center py-5 mx-5 border-b-[1px] ${
+          dark ? "border-white/10" : "border-gray-300"
+        }`}
+      >
+        <HiXMark
+          onClick={closeShoppingCartInMobile}
+          className={`w-5 h-5 shrink-0 transition-all duration-300 ${
+            dark ? "text-white" : "text-zinc-600"
+          }`}
+        />
+
+        <div className={`text-base shrink-0 font-PoppinsRegular font-medium 
+            ${dark ? 'text-white' :'text-zinc-700'}`}>
+          Shopping Cart
+        </div>
+      </div>
+      
+    </>
+  )
+}
