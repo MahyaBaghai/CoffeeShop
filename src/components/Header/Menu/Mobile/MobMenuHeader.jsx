@@ -10,14 +10,14 @@ export default function MobMenuHeader({dark ,closeMenuInMobile}) {
           dark ? "border-white/10" : "border-gray-100"
         }`}
       >
-        <div className="flex gap-x-2 w-30 h-10 [&>*]:text-orange-300">
+        <div className="flex gap-x-2 w-30 h-10 [&>*]:text-orange-300 cursor-pointer">
           <Logo />
           <LogoType />
         </div>
         <HiXMark
           
           onClick={closeMenuInMobile}
-          className={`w-5 h-5 shrink-0 transition-all duration-300 ${
+          className={`w-5 h-5 shrink-0 transition-all duration-300 cursor-pointer ${
             dark ? "text-white" : "text-zinc-600"
           }`}
         />

@@ -1,6 +1,9 @@
 import Logo from "../Icons/Logo"
 import LogoType from "../Icons/LogoType"
+import { useTranslation } from 'react-i18next';
+
 export default function FooterSectionOne() {
+  const { t } = useTranslation();
   return (
     <>
     <div className='flex flex-col text-gray-300 pt-15 max-lg:ml-3 '>
@@ -10,7 +13,7 @@ export default function FooterSectionOne() {
 
         </div>
         <div className="font-PoppinsRegular font-normal xl:text-base/8 text-sm/8">
-            We aim to be a model for Iranian producers and a reference for coffee culture in Iran by being a leader in the production process, product type and quality, service, and distribution. We believe that the opinion of the people of Iran and the region should improve towards Iranian products, and we are working enthusiastically in this direction.
+             {t('FooterSec1')}
         </div>
     </div>
       

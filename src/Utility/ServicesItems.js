@@ -6,32 +6,31 @@ const serviceItems=[
     {
         id:1 , 
         img: Support , 
-        title:' support', 
-        txt:'7 days a week, 24 hours a day'
+        title:'ServiceSupportTitle', 
+        txt:'ServiceSupportTxt'
     },
-    {
-        id:2 ,
+   
+    
+    { 
+        id:2 , 
+        img: Express , 
+        title:'ServiceExpressTitle', 
+        txt:'ServiceExpressTxt'
+    },
+   
+     {
+        id:3 ,
         img: Roast , 
-        title:' Specialized roast', 
-        txt:'Freshly roasted and high quality'
+        title:'ServiceRoastingTitle', 
+        txt:'ServiceRoastingTxt'
     },
     
      
-     { 
-        id:3 , 
-        img: Express , 
-        title:' Express delivery', 
-        txt:'High-speed package delivery'
-    },
-    
-   {
+    {
         id:4 , 
         img: Accessory , 
-        title:' Coffee accessory', 
-        txt:'Brewing equipment and tools'
+        title:'ServiceAccessoriesTitle', 
+        txt:'ServiceAccessoriesTxt'
     },
-    
-    
-    
 ]
 export default serviceItems

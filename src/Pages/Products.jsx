@@ -2,8 +2,11 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import Cards from "../components/Cards/Cards";
 import { useState } from "react";
 import productsInfo from "../Utility/productIsnfo";
+import { useTranslation } from 'react-i18next';
 
 export default function Products({ dark }) {
+  const { t } = useTranslation();
+
   const [productsData, setProductsData] = useState(productsInfo);
 
   const calculatePrice = (price, discount) => {
@@ -23,14 +26,14 @@ export default function Products({ dark }) {
         <div className="@8xl:w-[1260px] @8xl:mx-auto @3xl:mx-10 mx-4 relative z-10 lg:pt-40 md:pt-28 pt-8 ">
           {/* title */}
           <div className={`${dark ? "text-white" : "text-zinc-700"}`}>
-            <div className="sectionTitle "> Latest products </div>
-            <div className="flex justify-between items-center gap-x-1 md:pb-12 pb-6">
-              <span className="sectionSubtitle">
-                Processed from coffee beans
-              </span>
+            <div className="sectionTitle "> {t('NewestProducts')} </div>
+            <div className="flex justify-between items-center gap-x-1 md:pb-12 pb-6 ">
+              <div className="sectionSubtitle">
+                {t('CoffeeBeans')}
+              </div>
               <div className="sectionLink">
-                <div className="hidden md:block">View all products</div>
-                <div className="md:hidden block">View all </div>
+                <div className="hidden md:block">{t('ViewAllProducts')}</div>
+                <div className="md:hidden block">{t('ViewAll')} </div>
                 <MdKeyboardArrowRight className="sectionLinkIcon" />
               </div>
             </div>

@@ -1,7 +1,9 @@
 import { GoPlus } from "react-icons/go";
 import { HiOutlineMinus } from "react-icons/hi2";
+import { useTranslation } from 'react-i18next';
 
 export default function MobFullShoppingCart({dark}) {
+   const { t } = useTranslation();
   return (
     <>
      <div
@@ -31,7 +33,7 @@ export default function MobFullShoppingCart({dark}) {
                 dark ? "text-emerald-500" : "text-teal-600"
               }`}
             >
-              $ 0.18 discount
+             {t('Discount')}  0.18  €
             </div>
 
             <div className="flex justify-between items-center mr-5 gap-x-2">
@@ -40,19 +42,19 @@ export default function MobFullShoppingCart({dark}) {
                   dark ? "[&_*]:text-white" : "[&_*]:text-zinc-700"
                 }`}
               >
-                <div className="text-xs font-normal">$</div>
                 <div className="text-base font-medium">2.36 </div>
+                <div className="text-xs font-normal">€</div>
               </div>
 
               {/* couter section */}
 
               <div className="flex items-center justify-evenly font-PoppinsMedium font-medium text-base rounded-[100px]  w-17 h-8 border-[1px] border-gray-300 text-orange-300">
                 <div>
-                  <GoPlus className="xl:w-5 xl:h-5 w-4 h-4 stroke-1" />
+                  <GoPlus className="xl:w-5 xl:h-5 w-4 h-4 stroke-1 cursor-pointer" />
                 </div>
                 <div> 2 </div>
                 <div>
-                  <HiOutlineMinus className="xl:w-5 xl:h-5 w-4 h-4 stroke-2" />
+                  <HiOutlineMinus className="xl:w-5 xl:h-5 w-4 h-4 stroke-2 cursor-pointer" />
                 </div>
               </div>
             </div>

@@ -1,6 +1,8 @@
 import { FaRegStar } from "react-icons/fa";
 import { HiOutlineShoppingCart } from "react-icons/hi2";
 import { LiaExchangeAltSolid } from "react-icons/lia";
+import { useTranslation } from 'react-i18next';
+
 export default function Cards({
   dark,
   img,
@@ -11,10 +13,11 @@ export default function Cards({
   stock,
   finalPrice,
 }) {
+  const { t } = useTranslation();
   return (
     <>
       <div
-        className={`flex flex-col md:p-5 p-3 justify-center shadow-normal rounded-2xl ${
+        className={`flex flex-col md:p-5 p-3 justify-center shadow-normal rounded-2xl cursor-pointer ${
           dark ? "bg-zinc-700" : "bg-white"
         }`}
       >
@@ -46,13 +49,13 @@ export default function Cards({
 
               <div className={`flex gap-x-0.5 font-PoppinsMedium items-center ${dark ? 'text-emerald-500' : 'text-teal-600'}`}>
                 <div className="font-semibold md:text-xl text-lg">{finalPrice}</div>
-                <div className="font-normal md:text-base text-xs">$</div>
+                <div className="font-normal md:text-base text-xs">€</div>
               </div>
 
               {/* previous Price section */}
               <div className="flex font-PoppinsRegular font-normal text-gray-400 items-center relative">
                 <div className="md:text-xl text-lg"> {price}</div>
-                <div className="md:text-sm text-xs">$</div>
+                <div className="md:text-sm text-xs">€</div>
                 <div className="border-t-[1px] border-red-500 md:w-12 w-10 absolute right-0 left-0"></div>
               </div>
             </div>
@@ -61,14 +64,14 @@ export default function Cards({
           {stock && discount === 0 && (
             <div className={`flex gap-x-0.5 font-PoppinsMedium items-center ${dark ? 'text-emerald-500' : 'text-teal-600'}`}>
               <div className="font-semibold md:text-xl text-lg">{finalPrice}</div>
-              <div className="font-normal md:text-base text-xs">$</div>
+              <div className="font-normal md:text-base text-xs">€</div>
             </div>
           )}
 
           {/* Not available at the moment */}
           {!stock && (
             <div className="font-PoppinsMedium font-normal md:text-base text-sm text-red-400">
-              Not available
+              {t('Unavailable')}
             </div>
           )}
         </div>

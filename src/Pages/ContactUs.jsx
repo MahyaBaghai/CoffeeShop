@@ -1,6 +1,9 @@
 import { VscCircleSmallFilled } from "react-icons/vsc";
 import { LuPhone } from "react-icons/lu";
+import { useTranslation } from 'react-i18next';
+
 export default function ContactUs({ dark }) {
+  const { t } = useTranslation();
   return (
     <>
       <section className="@container">
@@ -11,9 +14,9 @@ export default function ContactUs({ dark }) {
               className="h-full w-full  mx-auto"/>
             </div>
             <div className={`${dark ? "text-white" : "text-zinc-700"} `}>
-              <div className="sectionTitle"> One of the best coffees!</div>
+              <div className="sectionTitle"> {t('ContactTitle')}</div>
               <div className="sectionSubtitle">
-                Ask us about the quality of coffee...
+                {t('ContactDis')}
               </div>
 
               <div className={`flex my-5 ${dark ? "text-gray-100" : "text-zinc-700"}`} >
@@ -23,14 +26,12 @@ export default function ContactUs({ dark }) {
               </div>
 
               <div className="font-PoppinsRegular font-normal lg:text-lg md:text-base text-sm italic">
-                Feel our warm and cozy atmosphere, where everyone can find
-                aromatic coffee and try our delicious desserts that go perfectly
-                with hot coffee. Our stylish interior and friendly staff will
-                make your day!
+                {t('ContactTxt')}
               </div>
               <div className="inline-flex items-center gap-x-2 text-orange-300 border-2 border-orange-300 rounded-full px-5 py-2 mt-6">
                 <LuPhone className="rotate-y-180 md:w-6 md:h-6 w-5 h-5"/>
-                <div className="font-PoppinsRegular font-normal lg:text-lg md:text-base text-sm">Ordering</div>
+                <div className="font-PoppinsRegular font-normal lg:text-lg md:text-base text-sm cursor-pointer">
+                  {t('ContactOrder')}</div>
               </div>
             </div>
           </div>

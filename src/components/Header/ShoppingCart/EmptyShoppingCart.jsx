@@ -1,6 +1,8 @@
 import { PiShoppingCartSimple } from "react-icons/pi";
+import { useTranslation } from 'react-i18next';
 
 export default function EmptyShoppingCart({ dark }) {
+  const { t } = useTranslation();
   return (
     <>
       {/* content empty shopping cart section */}
@@ -15,7 +17,7 @@ export default function EmptyShoppingCart({ dark }) {
               dark ? "text-white" : "text-zinc-700"
             }`}
           >
-            No products added
+            {t('EmptyCart')}
           </div>
         </div>
         {/* button empty shopping cart section */}
@@ -29,7 +31,7 @@ export default function EmptyShoppingCart({ dark }) {
                  : "bg-teal-600 hover:bg-teal-700"
              }`}
           >
-            View store page
+             {t('ViewShopPage')}
           </button>
         </div>
       </div>

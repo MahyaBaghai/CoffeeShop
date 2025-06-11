@@ -3,14 +3,14 @@ import Cards from "../components/Cards/Cards";
 import { useState, useRef } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-
+import { useTranslation } from 'react-i18next';
 import { Navigation } from "swiper/modules";
 
 export default function BestProduct({ dark }) {
+  const { t } = useTranslation();
   const [bestProducts, setBestProducts] = useState(bestProduct);
 
   const swiperRef = useRef(null);
@@ -40,10 +40,10 @@ export default function BestProduct({ dark }) {
         <div className="@8xl:w-[1260px] @8xl:mx-auto @3xl:mx-10 mx-4">
           {/* title */}
           <div className={`${dark ? "text-white" : "text-zinc-700"}`}>
-            <div className="sectionTitle "> Best selling products </div>
+            <div className="sectionTitle ">  {t('BestProducts')} </div>
             <div className="flex justify-between items-center gap-x-1 md:pb-12 pb-6">
               <span className="sectionSubtitle">
-                Suggestion of coffee drinkers...
+                 {t('BestCoffeeLovers')}
               </span>
               <div className="flex gap-3 md:gap-5">
                 <button

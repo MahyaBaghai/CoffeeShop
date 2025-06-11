@@ -4,8 +4,10 @@ import MobMainHeader from "../components/Header/MobMainHeader";
 import Curve from "../components/Icons/Curve";
 import Circles from "../components/Icons/Circles";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { useTranslation } from 'react-i18next';
 
 export default function Home({ dark, toggleTheme }) {
+  const { t } = useTranslation();
   return (
     <>
     <DesMainHeader dark={dark} toggleTheme={toggleTheme} />
@@ -14,21 +16,22 @@ export default function Home({ dark, toggleTheme }) {
         {/* Headers in Desktop & Mobile */}
 
         {/* The Texts on the Header Image */}
-        <div className="@8xl:w-[1260px] @8xl:mx-auto @3xl:mx-10 @3xs:mx-4 md:min-h-screen xs:min-h-[300px] min-h-[200px] flex items-center overflow-hidden relative">
+        <div className="@8xl:w-[1260px] @8xl:mx-auto @3xl:mx-10 @3xs:mx-7 md:min-h-screen xs:min-h-[300px] min-h-[200px] flex items-center overflow-hidden relative">
           <div className="text-white">
-            <div className="font-Oswald italic font-bold text-xl xs:text-3xl md:text-4xl xl:text-5xl md:mb-2">
-              Tanzanian Arabica Coffee
+            {/* header title */}
+            <div className="font-Oswald italic font-bold text-2xl xs:text-3xl md:text-4xl xl:text-5xl md:mb-2">
+              {t('HeaderTitle')}
             </div>
-            <div className="font-Oswald font-light italic text-lg xs:text-2xl md:text-3xl xl:text-4xl mb-2 md:mb-8 lg:mb-11 ">
-              A cup of balance!
+            {/* header sub title */}
+            <div className="font-Oswald font-light italic text-lg xs:text-2xl md:text-3xl xl:text-4xl mb-3 sm:mb-5 md:mb-8 lg:mb-11 ">
+              {t('HeaderSubTitle')}
             </div>
+            {/* header text */}
             <div
-              className="font-PoppinsRegular italic font-normal text-xs xs:text-base lg:text-lg xl:text-xl 
-            w-[220px] xs:w-[300px] md:w-[370px] lg:w-[425px] xl:w-[520px]"
+              className="font-PoppinsRegular italic font-normal text-xs xs:text-sm lg:text-lg xl:text-xl 
+            w-[180px] xs:w-[220px] md:w-[260px] lg:w-[280px] xl:w-[400px]"
             >
-              You have certainly heard the familiar name Arabica. Arabica is one
-              of the coffee varieties cultivated in various regions of the
-              coffee belt.
+             {t('HeaderText')}
             </div>
           </div>
 

@@ -1,31 +1,10 @@
+import item from "./../Utility/item";
+import { useTranslation } from 'react-i18next';
+
 export default function CategoryItems({ dark }) {
-  const items = [
-    {
-      id: 1,
-      image: "/images/categories/category1.png",
-      title: "Turkish coffee",
-    },
-    {
-      id: 2,
-      image: "/images/categories/category2.png",
-      title: "Coffee tester pack",
-    },
-    {
-      id: 3,
-      image: "/images/categories/category3.png",
-      title: "Espresso maker",
-    },
-    {
-      id: 4,
-      image: "/images/categories/category4.png",
-      title: "Accessories and equipment",
-    },
-    {
-      id: 5,
-      image: "/images/categories/category5.png",
-      title: "Brewed coffee and espresso",
-    },
-  ];
+  const { t } = useTranslation();
+
+  const items= item
   return (
     <>
       <section className="@container">
@@ -34,7 +13,7 @@ export default function CategoryItems({ dark }) {
             {items.map((item) => (
               <div key={item.id} className="flex flex-col gap-2.5 h-full
                xl:w-45 lg:w-40 sm:w-35 xs:w-30 2xs:w-25 w-22 ">
-                <div className="flex      ">
+                <div className="flex cursor-pointer">
                   <img src={item.image} alt={item.title} />
                 </div>
                 <div
@@ -42,7 +21,7 @@ export default function CategoryItems({ dark }) {
                     dark ? "text-white" : "text-zinc-700"
                   }`}
                 >
-                  {item.title}
+                  {t(item.title)}
                 </div>
               </div>
             ))}

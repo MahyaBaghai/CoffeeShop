@@ -6,13 +6,15 @@ import { HiOutlineBriefcase } from "react-icons/hi2";
 import { HiOutlineDocumentText } from "react-icons/hi2";
 import { FiPhoneOutgoing } from "react-icons/fi";
 import MobSubMenu from "./MobSubMenu";
+import { useTranslation } from 'react-i18next';
 
 export default function MobMenuBody({ dark, toggleSubMenu, openSubMenu}) {
+   const { t } = useTranslation();
   return (
     <>
     <div className="flex items-center gap-x-2 pl-2.5 h-10 mx-4 mt-6 mb-4 rounded-md text-orange-300 bg-orange-200/20">
         <HiOutlineHome className="w-5 h-5 cursor-pointer" />
-        <span className="cursor-pointer">Home</span>
+        <span className="cursor-pointer">{t('Home')}</span>
       </div>
 
       <ul
@@ -34,7 +36,7 @@ export default function MobMenuBody({ dark, toggleSubMenu, openSubMenu}) {
           >
             <div>
               <HiOutlineShoppingBag className="w-5 h-5" />
-              <div>Store </div>
+              <div>{t('Shop')} </div>
             </div>
             <MdOutlineKeyboardArrowDown />
           </div>
@@ -44,23 +46,18 @@ export default function MobMenuBody({ dark, toggleSubMenu, openSubMenu}) {
         </li>
 
         <li>
-          <IoChatboxEllipsesOutline className="w-5 h-5" />
-          <span>Dictionary</span>
-        </li>
-
-        <li>
           <HiOutlineBriefcase className="w-5 h-5" />
-          <span> About</span>
+          <span> {t('Blog')}</span>
         </li>
 
         <li>
           <HiOutlineDocumentText className="w-5 h-5" />
-          <span>Blog</span>
+          <span>{t('About')}</span>
         </li>
 
         <li>
-          <FiPhoneOutgoing className="w-5 h-5" />
-          <span>Contact</span>
+          <FiPhoneOutgoing className="w-4.5 h-4.5" />
+          <span>{t('Contact')}</span>
         </li>
       </ul>
       

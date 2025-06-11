@@ -17,19 +17,19 @@ export default function MobNavbar({
           {/* hamburger icon */}
           <div onClick={openMenuInMobile}>
             <RxHamburgerMenu
-              className={`h-6 w-6 sm:h-8 sm:w-8 transition-all duration-300  ${
+              className={`h-6 w-6 sm:h-8 sm:w-8 transition-all duration-300 cursor-pointer  ${
                 dark ? "text-white" : "text-zinc-700"
               }`}
             />
           </div>
           {/* golden coffee logo icon */}
           <div>
-            <LogoType className="w-25 h-10 text-orange-300" />
+            <LogoType className="w-25 h-10 text-orange-300 cursor-pointer" />
           </div>
           {/* shopping cart icon */}
           <div onClick={openShoppingCartInMobile}>
             <ShopIcon
-              className={`h-6 w-6 sm:h-8 sm:w-8 rotate-y-180 ${
+              className={`h-6 w-6 sm:h-8 sm:w-8 rotate-y-180 cursor-pointer ${
                 dark ? "text-white" : "text-zinc-700"
               }`}
             />

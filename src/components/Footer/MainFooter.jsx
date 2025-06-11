@@ -3,7 +3,10 @@ import { IoIosArrowUp } from "react-icons/io";
 import FooterSectionOne from "./FooterSectionOne";
 import FooterSectionTwo from "./FooterSectionTwo";
 import FooterSectionThree from "./FooterSectionThree";
+import { useTranslation } from 'react-i18next';
+
 export default function MainFooter({ dark }) {
+  const { t } = useTranslation();
   return (
     <>
       <div className="w-full bg-zinc-700 ">
@@ -38,12 +41,12 @@ export default function MainFooter({ dark }) {
                 </div>
               </div>
               <div className="font-PoppinsMedium">
-                All rights to this user interface belong to <span className="text-orange-200"> Mahya Baghai</span> .
+                UI/UX Design © 2024 <span className="text-orange-200"> Mahya Baghai</span> .
               </div>
             </div>
 
             <div className="font-PoppinsRegular max-md:ml-10">
-              Copyright © 2024 Golden Coffee. All rights reserved
+               {t('FooterCopyRight')}
             </div>
           </div>
         </div>

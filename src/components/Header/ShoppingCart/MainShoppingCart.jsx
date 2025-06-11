@@ -24,7 +24,7 @@ export default function MainShoppingCart({ dark, closeShoppingCartInMobile }) {
         <ShoppingCartFooter dark={dark} />
       </div>
 
-      {/* //////////////////////////////////////////////////////////////////////// */}
+      {/* /////////////////////////// */}
 
       {/* shopping cart in Mobile */}
       <div
@@ -41,15 +41,15 @@ export default function MainShoppingCart({ dark, closeShoppingCartInMobile }) {
           {/* <MobShoppingCartHeader
             dark={dark}
             closeShoppingCartInMobile={closeShoppingCartInMobile}
-          /> */}
+          />
 
-          {/* <EmptyShoppingCart dark={dark} /> */}
+          <EmptyShoppingCart dark={dark} /> */}
 
           {/* if(shoppindCart===full){MobileshoppingHeader , MobFullShoppingcart} */}
 
-          <div className={`flex-1 overflow-y-auto`}>
+         <div className={`flex-1 overflow-y-auto`}>
             {/* shopping cart header in mobile */}
-            <MobShoppingCartHeader
+             <MobShoppingCartHeader
               dark={dark}
               closeShoppingCartInMobile={closeShoppingCartInMobile}
             />
@@ -57,7 +57,7 @@ export default function MainShoppingCart({ dark, closeShoppingCartInMobile }) {
             <MobFullShoppingCart dark={dark} />
           </div>
 
-          <div className="sticky bottom-0 w-full px-3 pb-5 mt-3">
+           <div className="sticky bottom-0 w-full px-3 pb-5 mt-3">
             <ShoppingCartFooter dark={dark} />
           </div>
         </div>

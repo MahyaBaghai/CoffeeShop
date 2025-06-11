@@ -11,7 +11,7 @@ function App() {
   };
   return (
     <>
-    <div className={`@container min-h-screen min-w-[336px] ${dark ? " bg-zinc-800" : "bg-gray-100"}`}>
+    <div className={`@container min-h-screen min-w-[380px] ${dark ? " bg-zinc-800" : "bg-gray-100"}`}>
 
       <Routers dark={dark} toggleTheme={toggleTheme}/>
     </div>

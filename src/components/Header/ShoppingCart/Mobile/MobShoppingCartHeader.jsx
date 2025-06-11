@@ -1,6 +1,8 @@
 import { HiXMark } from "react-icons/hi2";
+import { useTranslation } from 'react-i18next';
 
 export default function MobShoppingCartHeader({dark, closeShoppingCartInMobile}) {
+  const { t } = useTranslation();
   return (
     <>
     <div
@@ -10,14 +12,14 @@ export default function MobShoppingCartHeader({dark, closeShoppingCartInMobile})
       >
         <HiXMark
           onClick={closeShoppingCartInMobile}
-          className={`w-5 h-5 shrink-0 transition-all duration-300 ${
+          className={`w-5 h-5 shrink-0 transition-all duration-300 cursor-pointer ${
             dark ? "text-white" : "text-zinc-600"
           }`}
         />
 
         <div className={`text-base shrink-0 font-PoppinsRegular font-medium 
             ${dark ? 'text-white' :'text-zinc-700'}`}>
-          Shopping Cart
+          {t('ShoppingCart')}
         </div>
       </div>
       
