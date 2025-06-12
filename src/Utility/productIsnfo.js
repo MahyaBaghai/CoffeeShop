@@ -2,7 +2,7 @@
  let productsInfo=[
     {   
         id:1 , 
-        img:'/images/products/p1.png' , 
+        img:'./images/products/p1.png' , 
         name:'Turkish coffee Ben Manu 250 grams, model 1', 
         price:8.75, 
         discount:0 ,
@@ -11,7 +11,7 @@
     },
     {   
         id:2 , 
-        img:'/images/products/p2.png' , 
+        img:'./images/products/p2.png' , 
         name:'Turkish coffee Ben Manu 250 grams, model 2', 
         price:8.75,  
         discount:12 ,
@@ -20,7 +20,7 @@
     },
     {   
         id:3 , 
-        img:'/images/products/p3.png' , 
+        img:'./images/products/p3.png' , 
         name:'Turkish coffee Ben Manu 250 grams, model 3', 
         price:9.5, 
         discount:0 ,
@@ -30,7 +30,7 @@
 
     {   
         id:4 , 
-        img:'/images/products/p4.png' , 
+        img:'./images/products/p4.png' , 
         name:'Turkish coffee Ben Manu 250 grams, model 4', 
         price:9.5, 
         discount:0 ,
@@ -40,7 +40,7 @@
 
     {   
         id:5 , 
-        img:'/images/products/p3.png' , 
+        img:'./images/products/p3.png' , 
         name:'Turkish coffee Ben Manu 250 grams, model 5', 
         price:8.5, 
         discount:0 ,
@@ -49,7 +49,7 @@
     },
     {   
         id:6 , 
-        img:'/images/products/p4.png' , 
+        img:'./images/products/p4.png' , 
         name:'Turkish coffee Ben Manu 250 grams, model 6', 
         price:8.95 , 
         discount:0 ,
@@ -58,7 +58,7 @@
     },
     {   
         id:7 , 
-        img:'/images/products/p1.png' , 
+        img:'./images/products/p1.png' , 
         name:'Turkish coffee Ben Manu 250 grams, model 7', 
         price:8.25, 
         discount:0 ,
@@ -67,7 +67,7 @@
     },
     {   
         id:8 , 
-        img:'/images/products/p2.png' , 
+        img:'./images/products/p2.png' , 
         name:'Turkish coffee Ben Manu 250 grams, model 8', 
         price:8.25, 
         discount:12 ,
