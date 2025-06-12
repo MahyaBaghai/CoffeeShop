@@ -1,7 +1,7 @@
 const blogItems=[
     {
         id:1 , 
-        img:'/images/blogs/blog-1.png' , 
+        img:'./images/blogs/blog-1.png' , 
         title:'BlogText1' , 
         day:'9', 
         month:'March',
@@ -9,7 +9,7 @@ const blogItems=[
     },
     {
         id:2,
-        img:'/images/blogs/blog-2.png' , 
+        img:'./images/blogs/blog-2.png' , 
         title:'BlogText2' , 
         day:'14', 
         month:'April',
@@ -17,7 +17,7 @@ const blogItems=[
     },
     {
         id:3 , 
-        img:'/images/blogs/blog-3.png' , 
+        img:'./images/blogs/blog-3.png' , 
         title:'BlogText3' , 
         day:'2', 
         month:'May',
@@ -25,7 +25,7 @@ const blogItems=[
     },
     {
         id:4 , 
-        img:'/images/blogs/blog-4.png' , 
+        img:'./images/blogs/blog-4.png' , 
         title:'BlogText4' , 
         day:'27', 
         month:'June',
