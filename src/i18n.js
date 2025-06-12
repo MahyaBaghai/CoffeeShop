@@ -86,7 +86,7 @@ const resources = {
       FooterSec2txt8:"Contact Us ",
       FooterSec3Title:"Stay Connected ",
       FooterSec3address:"4 Shariaty St., Shariaty St., Motahari Blvd., Rasht ",
-      FooterCopyRight:"Copyright © 2024 Golden Café. All rights reserved."
+      FooterCopyRight:"Copyright © 2025 Golden Café. All rights reserved."
 
     }
   },
@@ -173,7 +173,7 @@ const resources = {
       FooterSec2txt8:"Häufige Fragen ",
       FooterSec3Title:"Bleiben Sie in Verbindung ",
       FooterSec3address:"Motahari Blvd., Shariaty Str., Östl. Shariaty Gasse, Nr. 4, Rasht ",
-      FooterCopyRight:"Copyright © 2024 Golden Café. Alle Rechte vorbehalten."
+      FooterCopyRight:"Copyright © 2025 Golden Café. Alle Rechte vorbehalten."
 
     }
   }

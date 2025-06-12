@@ -10,7 +10,7 @@ export default function ContactUs({ dark }) {
         <div className="@8xl:w-[1260px] @8xl:mx-auto @3xl:mx-10 mx-4">
           <div className="my-28 flex md:flex-row flex-col justify-center items-center md:gap-6 gap-10">
             <div className="w-[296px] h-[305px] shrink-0 ">
-              <img src="/images/contact.png" alt="One of the best coffees" 
+              <img src="./images/contact.png" alt="One of the best coffees" 
               className="h-full w-full  mx-auto"/>
             </div>
             <div className={`${dark ? "text-white" : "text-zinc-700"} `}>

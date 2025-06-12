@@ -14,7 +14,7 @@ export default function CoffeeClub() {
             {/* coffee club logo */}
             <div className="flex items-center gap-x-3 md:gap-x-3 lg:gap-x-5 xl:gap-x-6 cursor-pointer">
               <img
-                src="/images/club/diamond.png"
+                src="./images/club/diamond.png"
                 alt="Coffee Club"
                 className="w-[68px] 2xs:w-[87px] lg:w-[110px] shrink-0 "
               />

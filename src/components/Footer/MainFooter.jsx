@@ -41,7 +41,7 @@ export default function MainFooter({ dark }) {
                 </div>
               </div>
               <div className="font-PoppinsMedium">
-                UI/UX Design © 2024 <span className="text-orange-200"> Mahya Baghai</span> .
+                UI/UX Design © 2025 <span className="text-orange-200"> Mahya Baghai</span> .
               </div>
             </div>
 
