@@ -5,7 +5,11 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react() , tailwindcss()],
+  plugins: [
+    react({
+      include: ['**/*.jsx', '**/*.js'] // اجبار به پردازش فایل‌های js
+    }) , 
+    tailwindcss()],
    base: '/CoffeeShop/'
 
 })

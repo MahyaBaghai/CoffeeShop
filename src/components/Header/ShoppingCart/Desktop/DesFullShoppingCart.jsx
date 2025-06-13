@@ -1,9 +1,11 @@
 import { GoPlus } from "react-icons/go";
 import { HiOutlineMinus } from "react-icons/hi2";
 import { useTranslation } from 'react-i18next';
+import { useCart } from './../../../../Context/CartContext'
 
-export default function DesFullShoppingCart({dark}) {
+export default function DesFullShoppingCart({ item, dark }) {
   const { t } = useTranslation();
+   const { increaseQuantity, decreaseQuantity, removeItem } = useCart();
   return (
     <>
     <div
@@ -14,7 +16,7 @@ export default function DesFullShoppingCart({dark}) {
         <div className={`flex items-center pt-3`}>
           {/* product picture section*/}
           <div className="xl:w-50 xl:h-35 w-23 h-25 ">
-            <img src="/images/products/p2.png" alt="Ben Mano Espresso Coffee" />
+            <img src={item.img} alt={item.name}  />
           </div>
 
           {/* product explain section*/}
@@ -25,7 +27,7 @@ export default function DesFullShoppingCart({dark}) {
                 dark ? "text-white" : "text-zinc-700"
               }`}
             >
-              Ben Mano Espresso Coffee, Prisca Model, 250 Grams
+              {item.name}
             </div>
 
             {/* another information section*/}
@@ -34,11 +36,15 @@ export default function DesFullShoppingCart({dark}) {
               <div className="flex items-center justify-evenly font-PoppinsMedium font-medium xl:text-xl text-lg rounded-[100px] xl:w-22 w-19 xl:h-11 h-9 border-[1px] border-gray-300 text-orange-300">
                
                 <div>
-                  <GoPlus className="xl:w-5 xl:h-5 w-4 h-4 stroke-1 cursor-pointer" />
+                  <GoPlus 
+                  onClick={() => increaseQuantity(item.id)}
+                  className="xl:w-5 xl:h-5 w-4 h-4 stroke-1 cursor-pointer" />
                 </div>
-                <div> 2 </div>
+                <div> {item.quantity} </div>
                 <div>
-                  <HiOutlineMinus className="xl:w-5 xl:h-5 w-4 h-4 stroke-2 cursor-pointer" />
+                  <HiOutlineMinus
+                  onClick={() => decreaseQuantity(item.id)}
+                  className="xl:w-5 xl:h-5 w-4 h-4 stroke-2 cursor-pointer" />
                 </div>
 
               </div>
@@ -50,14 +56,14 @@ export default function DesFullShoppingCart({dark}) {
                   }`}
                 >
                   
-                  {t('Discount')} 0.18 €
+                  {t('Discount')} {item.quantity}  €
                 </div>
                 <div
                   className={`flex items-center gap-x-1  ${
                     dark ? "text-white" : "text-zinc-700"
                   }`}
                 >
-                  <div className="xl:text-xl text-lg font-semibold"> 2.36 </div>
+                  <div className="xl:text-xl text-lg font-semibold"> {(item.quantity * item.finalPrice).toFixed(2)}</div>
                   <div className="xl:text-sm text-xs  font-text-base"> €</div>
                 </div>
               </div>

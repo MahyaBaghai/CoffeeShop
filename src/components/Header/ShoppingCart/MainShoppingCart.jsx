@@ -5,8 +5,11 @@ import DesShoppingCartHeader from "./Desktop/DesShoppingCartHeader";
 import DesFullShoppingCart from "./Desktop/DesFullShoppingCart";
 import MobFullShoppingCart from "./Mobile/MobFullShoppingCart";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { useCart } from  './../../../Context/CartContext'
+
 
 export default function MainShoppingCart({ dark, closeShoppingCartInMobile }) {
+   const { cartItems } = useCart();
   return (
     <>
       {/* shopping cart in desktop */}
@@ -15,13 +18,26 @@ export default function MainShoppingCart({ dark, closeShoppingCartInMobile }) {
         invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all ease-in-out delay-75
               ${dark ? "bg-zinc-700 " : "bg-white "} `}
       >
-        {/* <EmptyShoppingCart dark={dark} /> */}
-        <div className="flex flex-col my-4 mx-3 ">
-          <DesShoppingCartHeader dark={dark} />
-          <DesFullShoppingCart dark={dark} />
+        {cartItems.length === 0 ? ( 
+          <EmptyShoppingCart dark={dark} />
+        ) : 
+        ( <>
+          <div className="flex flex-col my-4 mx-3 ">
+        <DesShoppingCartHeader dark={dark} />
+        {cartItems.map(item => (
+          <DesFullShoppingCart
+          key={item.id} 
+          item={item} 
+          dark={dark} />
+        ))}
         </div>
-        {/*footer section*/}
-        <ShoppingCartFooter dark={dark} />
+        <ShoppingCartFooter 
+        dark={dark} 
+        cartItems={cartItems} /> 
+        </>
+        )}
+       
+       
       </div>
 
       {/* /////////////////////////// */}
@@ -37,15 +53,6 @@ export default function MainShoppingCart({ dark, closeShoppingCartInMobile }) {
             dark ? "bg-zinc-700" : "bg-white"
           }`}
         >
-          {/* if(shoppindCart===Empty){MobileshoppingHeader , EmptyShoppingcart} */}
-          {/* <MobShoppingCartHeader
-            dark={dark}
-            closeShoppingCartInMobile={closeShoppingCartInMobile}
-          />
-
-          <EmptyShoppingCart dark={dark} /> */}
-
-          {/* if(shoppindCart===full){MobileshoppingHeader , MobFullShoppingcart} */}
 
          <div className={`flex-1 overflow-y-auto`}>
             {/* shopping cart header in mobile */}
@@ -53,13 +60,31 @@ export default function MainShoppingCart({ dark, closeShoppingCartInMobile }) {
               dark={dark}
               closeShoppingCartInMobile={closeShoppingCartInMobile}
             />
+            {cartItems.length === 0 ? ( 
+              <EmptyShoppingCart dark={dark} />
+            ): 
+            (<>
+              {cartItems.map(item => (
+                <MobFullShoppingCart 
+                  key={item.id} 
+                  item={item} 
+                  dark={dark} 
+                />
+              ))}
+              <div className={`sticky bottom-0 w-full px-3 pb-5 mt-3  ${dark ? "bg-zinc-700" : "bg-white"} `}>
+            <ShoppingCartFooter 
+                dark={dark} 
+                cartItems={cartItems} 
+              />
+          </div>
+              
+            </>
+          )}
 
-            <MobFullShoppingCart dark={dark} />
+            
           </div>
 
-           <div className="sticky bottom-0 w-full px-3 pb-5 mt-3">
-            <ShoppingCartFooter dark={dark} />
-          </div>
+           
         </div>
 
         {/* overlay */}

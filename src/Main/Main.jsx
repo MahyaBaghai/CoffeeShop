@@ -8,10 +8,13 @@ import Blog from "../Pages/Blog"
 import ContactUs from "../Pages/ContactUs"
 import Services from "../Pages/Services"
 import MainFooter from "../components/Footer/MainFooter"
+import { CartProvider } from "./../Context/CartContext"
 
 export default function Main({ dark, toggleTheme }) {
   return (
     <>
+    <CartProvider>
+
       <Home dark={dark} toggleTheme={toggleTheme}/>
       <Products dark={dark}/>
       <CategoryBanner />
@@ -22,6 +25,8 @@ export default function Main({ dark, toggleTheme }) {
       <ContactUs dark={dark}/>
       <Services dark={dark} />
       <MainFooter dark={dark}/>
+      
+    </CartProvider>
     </>
   ) 
 }

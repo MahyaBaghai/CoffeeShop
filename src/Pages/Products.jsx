@@ -18,7 +18,9 @@ export default function Products({ dark }) {
 
   return (
     <>
-      <section className="@container min-h-[818px] w-full z-0 xl:bg-[url(/images/body-bg.png)] relative bg-no-repeat bg-cover ">
+      <section
+       id="products-section"
+       className="@container min-h-[818px] w-full z-0 xl:bg-[url(/images/body-bg.png)] relative bg-no-repeat bg-cover ">
         {!dark && (
           <div className="absolute inset-0 z-0 bg-gradient-to-t from-gray-100/65 to-gray-100/65"></div>
         )}

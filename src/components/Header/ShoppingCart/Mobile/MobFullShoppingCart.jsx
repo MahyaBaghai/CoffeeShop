@@ -1,9 +1,11 @@
 import { GoPlus } from "react-icons/go";
 import { HiOutlineMinus } from "react-icons/hi2";
 import { useTranslation } from 'react-i18next';
+import { useCart } from "./../../../../Context/CartContext"
 
-export default function MobFullShoppingCart({dark}) {
+export default function MobFullShoppingCart({ item, dark }) {
    const { t } = useTranslation();
+   const { increaseQuantity, decreaseQuantity, removeItem } = useCart();
   return (
     <>
      <div
@@ -15,8 +17,8 @@ export default function MobFullShoppingCart({dark}) {
           {/* image of product */}
           <div className="w-25 h-25 shrink-0">
             <img
-              src="./images/products/p2.png"
-              alt="Ben Mano Espresso Coffee"
+              src={item.img} 
+              alt={item.name}
             />
           </div>
 
@@ -25,7 +27,7 @@ export default function MobFullShoppingCart({dark}) {
               className={`text-sm font-medium line-clamp-2 shrink-0
                         ${dark ? "text-white" : "text-zinc-700"}`}
             >
-              Ben Mano Espresso Coffee, Prisca Model, 250 Grams
+             {item.name}
             </div>
 
             <div
@@ -33,7 +35,7 @@ export default function MobFullShoppingCart({dark}) {
                 dark ? "text-emerald-500" : "text-teal-600"
               }`}
             >
-             {t('Discount')}  0.18  €
+             {t('Discount')}   {item.quantity}  €
             </div>
 
             <div className="flex justify-between items-center mr-5 gap-x-2">
@@ -42,7 +44,7 @@ export default function MobFullShoppingCart({dark}) {
                   dark ? "[&_*]:text-white" : "[&_*]:text-zinc-700"
                 }`}
               >
-                <div className="text-base font-medium">2.36 </div>
+                <div className="text-base font-medium">{(item.quantity * item.finalPrice).toFixed(2)} </div>
                 <div className="text-xs font-normal">€</div>
               </div>
 
@@ -50,11 +52,15 @@ export default function MobFullShoppingCart({dark}) {
 
               <div className="flex items-center justify-evenly font-PoppinsMedium font-medium text-base rounded-[100px]  w-17 h-8 border-[1px] border-gray-300 text-orange-300">
                 <div>
-                  <GoPlus className="xl:w-5 xl:h-5 w-4 h-4 stroke-1 cursor-pointer" />
+                  <GoPlus 
+                  onClick={() => increaseQuantity(item.id)}
+                  className="xl:w-5 xl:h-5 w-4 h-4 stroke-1 cursor-pointer" />
                 </div>
-                <div> 2 </div>
+                <div> {item.quantity}</div>
                 <div>
-                  <HiOutlineMinus className="xl:w-5 xl:h-5 w-4 h-4 stroke-2 cursor-pointer" />
+                  <HiOutlineMinus 
+                  onClick={() => decreaseQuantity(item.id)}
+                  className="xl:w-5 xl:h-5 w-4 h-4 stroke-2 cursor-pointer" />
                 </div>
               </div>
             </div>
