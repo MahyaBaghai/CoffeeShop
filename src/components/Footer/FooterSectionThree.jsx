@@ -8,7 +8,7 @@ export default function FooterSectionThree() {
   const { t } = useTranslation();
   return (
     <>
-      <div className="flex flex-col  flex-wrap items-start lg:pt-22 pt-12 max-lg:ml-3 ">
+      <div id="contact-section" className="flex flex-col  flex-wrap items-start lg:pt-22 pt-12 max-lg:ml-3 ">
         {/* title  */}
         <div className="flex flex-col">
           <div className="font-PoppinsMedium text-xl font-medium text-white mb-7">

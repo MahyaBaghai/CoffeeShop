@@ -7,12 +7,16 @@ import { HiOutlineDocumentText } from "react-icons/hi2";
 import { FiPhoneOutgoing } from "react-icons/fi";
 import MobSubMenu from "./MobSubMenu";
 import { useTranslation } from 'react-i18next';
+import { useCart } from './../../../../Context/CartContext' ;
 
-export default function MobMenuBody({ dark, toggleSubMenu, openSubMenu}) {
+export default function MobMenuBody({ dark, toggleSubMenu, openSubMenu , closeMenuInMobile}) {
    const { t } = useTranslation();
+   const { goToHome, goToClub, goToAbout, goToContact} = useCart();
   return (
     <>
-    <div className="flex items-center gap-x-2 pl-2.5 h-10 mx-4 mt-6 mb-4 rounded-md text-orange-300 bg-orange-200/20">
+    <div
+     onClick={goToHome} 
+      className="flex items-center gap-x-2 pl-2.5 h-10 mx-4 mt-6 mb-4 rounded-md text-orange-300 bg-orange-200/20">
         <HiOutlineHome className="w-5 h-5 cursor-pointer" />
         <span className="cursor-pointer">{t('Home')}</span>
       </div>
@@ -45,17 +49,17 @@ export default function MobMenuBody({ dark, toggleSubMenu, openSubMenu}) {
           {openSubMenu && <MobSubMenu dark={dark} />}
         </li>
 
-        <li>
+        <li onClick={goToClub}>
           <HiOutlineBriefcase className="w-5 h-5" />
-          <span> {t('Blog')}</span>
+          <span> {t('Club')}</span>
         </li>
 
-        <li>
+        <li onClick={goToAbout}>
           <HiOutlineDocumentText className="w-5 h-5" />
           <span>{t('About')}</span>
         </li>
 
-        <li>
+        <li onClick={goToContact}>
           <FiPhoneOutgoing className="w-4.5 h-4.5" />
           <span>{t('Contact')}</span>
         </li>

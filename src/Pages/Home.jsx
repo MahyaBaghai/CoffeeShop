@@ -13,7 +13,9 @@ export default function Home({ dark, toggleTheme }) {
       {/* Headers in Desktop & Mobile */}
       <DesMainHeader dark={dark} toggleTheme={toggleTheme} />
       <MobMainHeader dark={dark} toggleTheme={toggleTheme} />
-      <section className="@container relative max-md:mt-16 md:bg-[url(/images/headerBgDesktop.webp)] bg-[url(/images/headerBgMobile.webp)] bg-no-repeat bg-cover bg-center md:min-h-screen h-50 xs:aspect-2/1 xs:h-auto md:aspect-auto ">
+      <section
+      id="home-section"
+      className="@container relative max-md:mt-16 md:bg-[url(/images/headerBgDesktop.webp)] bg-[url(/images/headerBgMobile.webp)] bg-no-repeat bg-cover bg-center md:min-h-screen h-50 xs:aspect-2/1 xs:h-auto md:aspect-auto ">
         {/* The Texts on the Header Image */}
         <div className="@8xl:w-[1260px] @8xl:mx-auto @3xl:mx-10 @3xs:mx-7 md:min-h-screen xs:min-h-[300px] min-h-[200px] flex items-center overflow-hidden relative">
           <div className="text-white">

@@ -14,7 +14,7 @@ export default function EmptyShoppingCart({ dark , closeShoppingCartInMobile}) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     }, 50); 
-    closeShoppingCartInMobile()
+    
   };
 
   return (

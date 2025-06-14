@@ -105,8 +105,9 @@ export default function Cards({
         <div className="flex justify-between items-center lg:gap-x-2 gap-x-1 mb-1.5">
           {/* shopping & change icon */}
           <div className="flex items-center xl:gap-x-2 gap-x-1 transition-all duration-300">
+            {/* shooping cart group */}
             <div
-              className={`flex items-center justify-center lg:w-12 lg:h-12 xs:w-11 xs:h-11 2xs:w-10 2xs:h-10 w-8 h-8 rounded-full ${
+              className={`flex items-center justify-center lg:w-12 lg:h-12 xs:w-11 xs:h-11 2xs:w-10 2xs:h-10 w-8 h-8 rounded-full relative ${
                 dark
                   ? "bg-zinc-800 hover:bg-emerald-500 active:bg-emerald-500"
                   : "bg-gray-100 hover:bg-teal-600 active:bg-teal-600"
@@ -128,6 +129,7 @@ export default function Cards({
                 }}
                 className="xs:w-7 xs:h-7 2xs:w-6 2xs:h-6 w-5 h-5 cursor-pointer text-gray-400 hover:text-white active:text-white"
               />
+              
             </div>
             <LiaExchangeAltSolid
               className={` xs:w-6 xs:h-6 2xs:w-5 2xs:h-5 w-4 h-4 cursor-pointer text-gray-400 ${

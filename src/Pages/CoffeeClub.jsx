@@ -8,7 +8,7 @@ export default function CoffeeClub() {
    const { t } = useTranslation();
   return (
     <>
-      <section className="@container">
+      <section id="club-section" className="@container">
         <div className="@8xl:w-[1260px] @8xl:mx-auto @3xl:mx-10 mx-4">
           <div className="flex max-md:flex-col items-center bg-linear-to-l from-emerald-500 to-emerald-600 rounded-2xl text-white shadow-normal w-full px-6 md:px-3 lg:px-6 py-5 lg:py-8 xl:gap-10 lg:gap-8 xmd:gap-12 md:gap-3 gap-8 my-10 2xs:my-15 md:my-18 lg:my-20 ">
             {/* coffee club logo */}

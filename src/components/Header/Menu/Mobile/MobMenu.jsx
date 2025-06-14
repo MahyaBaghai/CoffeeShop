@@ -37,6 +37,7 @@ export default function MobMenu({dark ,toggleTheme, closeMenuInMobile ,openShopp
               dark={dark}
               toggleSubMenu={toggleSubMenu}
               openSubMenu={openSubMenu}
+              closeMenuInMobile={closeMenuInMobile}
             />
 
             {/* footer menu */}

@@ -57,6 +57,44 @@ export function CartProvider({ children }) {
     
   };
 
+  const goToHome = () => {
+    setTimeout(() => {
+      const element = document.getElementById('home-section');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 50);    
+   
+  };
+
+  const goToClub = () => {
+    setTimeout(() => {
+      const element = document.getElementById('club-section');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 50);    
+  };
+
+  const goToAbout= () => {
+    setTimeout(() => {
+      const element = document.getElementById('about-section');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 50);    
+  };
+
+  const goToContact= () => {
+    setTimeout(() => {
+      const element = document.getElementById('contact-section');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 50);    
+  };
+
+
   
 
   return (
@@ -65,7 +103,10 @@ export function CartProvider({ children }) {
       addToCart,
       increaseQuantity,
       decreaseQuantity,
-      
+      goToHome,
+      goToClub,
+      goToAbout,
+      goToContact
     }}>
       {children}
     </CartContext.Provider>
