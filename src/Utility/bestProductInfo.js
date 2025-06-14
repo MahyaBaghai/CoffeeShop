@@ -1,63 +1,63 @@
 
 const bestProduct=[
     {   
-        id:1 , 
+        id:9 , 
         img:'./images/products/p5.png' , 
-        name:'Turkish coffee Ben Manu 350 grams, Noresca, First model', 
+        name:'Turkish coffee Ben Manu 350 grams, Noresca, model 1', 
         price:11.75, 
         discount:0 ,
         grade:4 , 
         stock:true 
     },
     {   
-        id:2 , 
+        id:10 , 
         img:'./images/products/p6.png' , 
-        name:'Turkish coffee Ben Manu 350 grams, Noresca, Second model', 
+        name:'Turkish coffee Ben Manu 350 grams, Noresca, model 2', 
         price:11.25, 
         discount:0 ,
         grade:4 , 
         stock:true 
     },
     {   
-        id:3 , 
+        id:11 , 
         img:'./images/products/p7.png' , 
-        name:'Turkish coffee Ben Manu 350 grams, Noresca, Third model', 
+        name:'Turkish coffee Ben Manu 350 grams, Noresca, model 3', 
         price:11.25, 
         discount:0 ,
         grade:4 , 
         stock:false 
     },
      {   
-        id:4 , 
+        id:12 , 
         img:'./images/products/p8.png' , 
-        name:'Turkish coffee Ben Manu 350 grams, Noresca, Fourth model', 
+        name:'Turkish coffee Ben Manu 350 grams, Noresca, model 4', 
         price:11.75, 
         discount:12 ,
         grade:5 , 
         stock:true 
     },
      {   
-        id:5 , 
+        id:13 , 
         img:'./images/products/p5.png' , 
-        name:'Turkish coffee Ben Manu 350 grams, Noresca, Fifth model', 
+        name:'Turkish coffee Ben Manu 350 grams, Noresca, model 5', 
         price:11.25, 
         discount:0 ,
         grade:4 , 
         stock:false 
     },
     {   
-        id:6 , 
+        id:14 , 
         img:'./images/products/p7.png' , 
-        name:'Turkish coffee Ben Manu 350 grams, Noresca, Sixth model', 
+        name:'Turkish coffee Ben Manu 350 grams, Noresca, model 6', 
         price:11.75, 
         discount:10 ,
         grade:4 , 
         stock:true 
     },
      {   
-        id:7 , 
+        id:15 , 
         img:'./images/products/p6.png' , 
-        name:'Turkish coffee Ben Manu 350 grams, Noresca, Seventh model', 
+        name:'Turkish coffee Ben Manu 350 grams, Noresca, model 7', 
         price:11.75, 
         discount:0 ,
         grade:5 , 

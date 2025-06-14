@@ -7,9 +7,9 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [
     react({
-      include: ['**/*.jsx', '**/*.js'] // اجبار به پردازش فایل‌های js
+      include: ['**/*.jsx', '**/*.js'] 
     }) , 
     tailwindcss()],
-   base: '/CoffeeShop/'
+    base: '/CoffeeShop/'
 
 })

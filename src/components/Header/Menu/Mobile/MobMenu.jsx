@@ -4,7 +4,8 @@ import MobMenuBody from "./MobMenuBody";
 import MobMenuFooter from "./MobMenuFooter";
 import ShopIcon from "../../../Icons/ShopIcon";
 
-export default function MobMenu({dark ,toggleTheme, closeMenuInMobile}) {
+
+export default function MobMenu({dark ,toggleTheme, closeMenuInMobile ,openShoppingCartInMobile}) {
 
     const [openSubMenu, setOpenSubMenu] = useState(false);
 
@@ -39,7 +40,11 @@ export default function MobMenu({dark ,toggleTheme, closeMenuInMobile}) {
             />
 
             {/* footer menu */}
-            <MobMenuFooter dark={dark} toggleTheme={toggleTheme} />
+            <MobMenuFooter 
+            dark={dark} 
+            toggleTheme={toggleTheme} 
+            closeMenuInMobile={closeMenuInMobile} 
+             openShoppingCartInMobile={openShoppingCartInMobile}/>
           </div>
         </div>
 

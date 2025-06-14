@@ -19,7 +19,7 @@ export default function MobMenuBody({ dark, toggleSubMenu, openSubMenu}) {
 
       <ul
         className={` mx-6.5 space-y-6 pb-6 [&_*]:flex [&_*]:gap-x-2 border-b-[1px] [&>li]:cursor-pointer
-        [&>*]:active:text-orange-300
+        [&>*]:active:text-orange-300 [&_*]:active:transition-all
           ${
             dark
               ? "border-white/10 [&>*]:text-white"

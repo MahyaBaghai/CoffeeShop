@@ -49,15 +49,15 @@ export default function BestProduct({ dark }) {
                 <button
                   className={`md:w-11 md:h-11 w-9 h-9  rounded-full flex items-center justify-center shadow-normal ${
                     dark
-                      ? "bg-zinc-700 hover:bg-white"
-                      : "bg-white hover:bg-gray-300"
+                      ? "bg-zinc-700 hover:bg-white hover:[&_*]:text-zinc-700 active:bg-white active:[&_*]:text-zinc-700 "
+                      : "bg-white hover:bg-gray-300 active:bg-gray-300"
                   }`}
                 >
                   <IoIosArrowBack
                     onClick={handlePrev}
                     className={`md:w-6.5 md:h-6.5 w-5 h-5 cursor-pointer mySwiper prev ${
                       dark
-                        ? "text-white hover:text-zinc-700 active:text-zinc-700"
+                        ? "text-white  "
                         : "text-zinc-700"
                     }`}
                   />
@@ -66,15 +66,15 @@ export default function BestProduct({ dark }) {
                 <button
                   className={`md:w-11 md:h-11 w-9 h-9 rounded-full flex items-center justify-center shadow-normal ${
                     dark
-                      ? "bg-zinc-700 hover:bg-white"
-                      : "bg-white hover:bg-gray-300"
+                      ? "bg-zinc-700 hover:bg-white hover:[&_*]:text-zinc-700 active:bg-white active:[&_*]:text-zinc-700 "
+                      : "bg-white hover:bg-gray-300 active:bg-gray-300"
                   }`}
                 >
                   <IoIosArrowForward
                     onClick={handleNext}
                     className={`md:w-6.5 md:h-6.5 w-5 h-5 cursor-pointer mySwiper ${
                       dark
-                        ? "text-white hover:text-zinc-700 active:text-zinc-700"
+                        ? "text-white "
                         : "text-zinc-700"
                     }`}
                   />
@@ -82,7 +82,7 @@ export default function BestProduct({ dark }) {
               </div>
             </div>
           </div>
-          {/* <div className="grid lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 2xs:gap-5 gap-2"> */}
+        
 
           <Swiper
             slidesPerView={2}
@@ -109,8 +109,8 @@ export default function BestProduct({ dark }) {
               <SwiperSlide>
                 <Cards
                   key={bestProduct.id}
-                  {...bestProduct}
                   dark={dark}
+                  {...bestProduct}
                   finalPrice={calculatePrice(
                     bestProduct.price,
                     bestProduct.discount
@@ -120,7 +120,7 @@ export default function BestProduct({ dark }) {
             ))}
           </Swiper>
 
-          {/* </div> */}
+          
         </div>
       </section>
     </>

@@ -44,6 +44,7 @@ export default function MainShoppingCart({ dark, closeShoppingCartInMobile }) {
 
       {/* shopping cart in Mobile */}
       <div
+        
         className={`md:hidden flex items-center fixed top-0 left-0 right-0 w-full h-16 px-4 sm:px-6 z-50
         ${dark ? "bg-zinc-700" : "bg-white"}`}
       >
@@ -61,7 +62,7 @@ export default function MainShoppingCart({ dark, closeShoppingCartInMobile }) {
               closeShoppingCartInMobile={closeShoppingCartInMobile}
             />
             {cartItems.length === 0 ? ( 
-              <EmptyShoppingCart dark={dark} />
+              <EmptyShoppingCart dark={dark} closeShoppingCartInMobile={closeShoppingCartInMobile}/>
             ): 
             (<>
               {cartItems.map(item => (

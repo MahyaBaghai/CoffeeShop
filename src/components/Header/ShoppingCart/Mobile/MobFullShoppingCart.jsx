@@ -5,7 +5,7 @@ import { useCart } from "./../../../../Context/CartContext"
 
 export default function MobFullShoppingCart({ item, dark }) {
    const { t } = useTranslation();
-   const { increaseQuantity, decreaseQuantity, removeItem } = useCart();
+   const { increaseQuantity, decreaseQuantity} = useCart();
   return (
     <>
      <div

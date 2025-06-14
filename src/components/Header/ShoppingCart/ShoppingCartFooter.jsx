@@ -14,8 +14,8 @@ export default function ShoppingCartFooter({ dark, cartItems }) {
           className={`flex items-center justify-center xl:w-36 xl:h-14 w-32 h-12 rounded-xl xl:text-xl md:text-lg text-base text-white font-normal font-PoppinsRegular cursor-pointer
                 ${
                   dark
-                    ? "bg-emerald-500 hover:bg-emerald-600"
-                    : "bg-teal-600 hover:bg-teal-700"
+                    ? "bg-emerald-500 hover:bg-emerald-600 active:bg-emerald-600"
+                    : "bg-teal-600 hover:bg-teal-700 active:bg-teal-700"
                 }`}
         >
           {t('Order')}

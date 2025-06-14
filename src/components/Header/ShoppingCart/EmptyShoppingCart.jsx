@@ -2,7 +2,7 @@ import { PiShoppingCartSimple } from "react-icons/pi";
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router'
 
-export default function EmptyShoppingCart({ dark }) {
+export default function EmptyShoppingCart({ dark , closeShoppingCartInMobile}) {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
@@ -14,6 +14,7 @@ export default function EmptyShoppingCart({ dark }) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     }, 50); 
+    closeShoppingCartInMobile()
   };
 
   return (

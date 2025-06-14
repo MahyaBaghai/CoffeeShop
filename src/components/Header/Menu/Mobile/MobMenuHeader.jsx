@@ -1,8 +1,22 @@
 import Logo from "../../../Icons/Logo";
 import LogoType from "../../../Icons/LogoType";
 import { HiXMark } from "react-icons/hi2";
+import { useNavigate } from 'react-router'
 
 export default function MobMenuHeader({dark ,closeMenuInMobile}) {
+   const navigate = useNavigate();
+
+    const goToHeader = () => {
+    navigate('/#Head-section'); 
+    setTimeout(() => {
+      const element = document.getElementById('Head-section');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 50); 
+    closeMenuInMobile()
+  };
+
   return (
     <>
       <div
@@ -10,10 +24,12 @@ export default function MobMenuHeader({dark ,closeMenuInMobile}) {
           dark ? "border-white/10" : "border-gray-100"
         }`}
       >
-        <div className="flex gap-x-2 w-30 h-10 [&>*]:text-orange-300 cursor-pointer">
+        <div 
+         onClick={goToHeader}
+         className="flex gap-x-2 w-30 h-10 [&>*]:text-orange-300 cursor-pointer">
           <Logo />
           <LogoType />
-        </div>
+       </div>
         <HiXMark
           
           onClick={closeMenuInMobile}

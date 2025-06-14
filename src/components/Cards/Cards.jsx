@@ -93,7 +93,7 @@ export default function Cards({
             </div>
           )}
 
-          {/* Not available at the moment */}
+          {/* Unavailable */}
           {!stock && (
             <div className="font-PoppinsMedium font-normal md:text-base text-sm text-red-400">
               {t("Unavailable")}
@@ -104,12 +104,12 @@ export default function Cards({
         {/* icons Section */}
         <div className="flex justify-between items-center lg:gap-x-2 gap-x-1 mb-1.5">
           {/* shopping & change icon */}
-          <div className="flex items-center xl:gap-x-3 gap-x-1 transition-all duration-300">
+          <div className="flex items-center xl:gap-x-2 gap-x-1 transition-all duration-300">
             <div
-              className={`flex items-center justify-center md:w-9 md:h-9 w-6 h-6 rounded-full ${
+              className={`flex items-center justify-center lg:w-12 lg:h-12 xs:w-11 xs:h-11 2xs:w-10 2xs:h-10 w-8 h-8 rounded-full ${
                 dark
-                  ? "bg-zinc-800 hover:bg-emerald-500"
-                  : "bg-gray-100 hover:bg-teal-600"
+                  ? "bg-zinc-800 hover:bg-emerald-500 active:bg-emerald-500"
+                  : "bg-gray-100 hover:bg-teal-600 active:bg-teal-600"
               }`}
             >
               <HiOutlineShoppingCart
@@ -126,12 +126,12 @@ export default function Cards({
                     });
                   }
                 }}
-                className="lg:w-6 lg:h-6  2xs:w-5 2xs:h-5 w-4 h-4 cursor-pointer text-gray-400 hover:text-white"
+                className="xs:w-7 xs:h-7 2xs:w-6 2xs:h-6 w-5 h-5 cursor-pointer text-gray-400 hover:text-white active:text-white"
               />
             </div>
             <LiaExchangeAltSolid
-              className={`l:w-6 lg:h-6 2xs:w-5 2xs:h-5 w-4 h-4 cursor-pointer text-gray-400 ${
-                dark ? "hover:text-emerald-500" : "hover:text-teal-600"
+              className={` xs:w-6 xs:h-6 2xs:w-5 2xs:h-5 w-4 h-4 cursor-pointer text-gray-400 ${
+                dark ? "hover:text-emerald-500 active:text-emerald-500" : "hover:text-teal-600 active:text-teal-600"
               }`}
             />
           </div>
@@ -141,7 +141,7 @@ export default function Cards({
             {Array.from({ length: 5 }).map((_, index) => (
               <FaRegStar
                 key={index}
-                className={`lg:w-6 lg:h-6 2xs:w-5 2xs:h-5 w-4 h-4  ${
+                className={`xl:w-6 xl:h-6 lg:w-5.5 lg:h-5.5 2xs:w-5 2xs:h-5 w-4 h-4  ${
                   5 - 1 - index < grade
                     ? "text-yellow-400"
                     : dark

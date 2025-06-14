@@ -11,6 +11,7 @@ export default function MobNavbar({
     <>
       
         <div
+        id="Head-section"
           className={` md:hidden min-w-[336px] flex items-center justify-between absolute w-full h-16 px-4 sm:px-6 
             ${dark ? "bg-zinc-700" : "bg-white"}`}
         >

@@ -37,6 +37,7 @@ export default function MobHeader({ dark, toggleTheme }) {
           dark={dark}
           toggleTheme={toggleTheme}
           closeMenuInMobile={closeMenuInMobile}
+          openShoppingCartInMobile={openShoppingCartInMobile}
         />
       )}
 

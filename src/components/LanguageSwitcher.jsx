@@ -10,7 +10,7 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <div className="flex items-start md:items-center justify-center gap-x-1.5  ">
+    <div className={`flex items-start md:items-center justify-center gap-x-1.5  `}>
       <MdLanguage className=" xl:w-4 xl:h-4 md:w-3 md:h-3 w-5 h-5"/>
       <button
         onClick={() => changeLanguage("de")}

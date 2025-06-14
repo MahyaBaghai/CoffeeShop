@@ -23,7 +23,7 @@ export default function FooterSectionTwo() {
             {footerItems.map((footerItem,index) => (
                 <div key={index} className="flex gap-x-2 items-center group cursor-pointer transition-all">
                     <div className="w-2 h-1 bg-current rounded-full group-hover:bg-orange-300"></div>
-                    <span className=" group-hover:text-orange-300">{t(footerItem.title)}</span>
+                    <span className=" group-hover:text-orange-300 group-active:text-orange-300">{t(footerItem.title)}</span>
                 </div>
             ))}
         

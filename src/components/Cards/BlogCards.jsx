@@ -20,7 +20,7 @@ export default function BlogCards({ dark }) {
             <img src={blogItem.img} alt={blogItem.title} className="rounded-2xl rounded-br-5xl h-full object-cover" />
           </div>
           {/* overlay section */}
-          <div className="hidden group-hover:block group-focus:block bg-linear-to-r from-orange-300/70 to-orange-200/70 absolute inset-0 rounded-2xl transition-all duration-300 delay-75 w-full h-full">
+          <div className="hidden group-hover:block group-focus:block group-active:block bg-linear-to-r from-orange-300/70 to-orange-200/70 absolute inset-0 rounded-2xl transition-all duration-300 delay-75 w-full h-full">
             <LogoType className="text-amber-900 w-[50%] h-[50%] absolute inset-0 m-auto" />
           </div>
         </div>
