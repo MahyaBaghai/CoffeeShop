@@ -72,7 +72,7 @@ export default function MainShoppingCart({ dark, closeShoppingCartInMobile }) {
                   dark={dark} 
                 />
               ))}
-              <div className={`sticky bottom-0 w-full px-3 pb-5 mt-3  ${dark ? "bg-zinc-700" : "bg-white"} `}>
+              <div className={`sticky bottom-0 w-full px-3 py-5  ${dark ? "bg-zinc-700" : "bg-white"} `}>
             <ShoppingCartFooter 
                 dark={dark} 
                 cartItems={cartItems} 

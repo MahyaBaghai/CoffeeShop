@@ -22,7 +22,8 @@ export default function MobFullShoppingCart({ item, dark }) {
             />
           </div>
 
-          <div className="[&_*]:font-PoppinsMedium space-y-1 pr-2">
+          {/* title of product */}
+          <div className="[&_*]:font-PoppinsMedium space-y-3 pr-2">
             <div
               className={`text-sm font-medium line-clamp-2 shrink-0
                         ${dark ? "text-white" : "text-zinc-700"}`}
@@ -30,19 +31,23 @@ export default function MobFullShoppingCart({ item, dark }) {
              {item.name}
             </div>
 
-            <div
+            <div className="flex flex-col">
+              <div
               className={`font-medium text-xs ${
                 dark ? "text-emerald-500" : "text-teal-600"
-              }`}
+              }
+              ${item.discount >0 ? 'block' : 'hidden'}
+              `}
             >
-             {t('Discount')}   {item.quantity}  €
+             {item.discount > 0 ? t('Discount') + item.discount + '€' : ''}  
             </div>
 
             <div className="flex justify-between items-center mr-5 gap-x-2">
               <div
                 className={`flex items-center ${
                   dark ? "[&_*]:text-white" : "[&_*]:text-zinc-700"
-                }`}
+                }
+                 `}
               >
                 <div className="text-base font-medium">{(item.quantity * item.finalPrice).toFixed(2)} </div>
                 <div className="text-xs font-normal">€</div>
@@ -63,6 +68,8 @@ export default function MobFullShoppingCart({ item, dark }) {
                   className="xl:w-5 xl:h-5 w-4 h-4 stroke-2 cursor-pointer" />
                 </div>
               </div>
+            </div>
+
             </div>
           </div>
         </div>

@@ -23,6 +23,8 @@ export function CartProvider({ children }) {
         return [...prevItems, { ...product, quantity: 1 }];
       }
     });
+    console.log(product);
+    
   };
 
 // incerase product
@@ -51,6 +53,8 @@ export function CartProvider({ children }) {
         })
         .filter(Boolean); 
     });
+    
+    
   };
 
   

@@ -5,7 +5,7 @@ import { useCart } from './../../../../Context/CartContext'
 
 export default function DesFullShoppingCart({ item, dark }) {
   const { t } = useTranslation();
-   const { increaseQuantity, decreaseQuantity, cartItems } = useCart();
+   const { increaseQuantity, decreaseQuantity} = useCart();
 
    
   return (
@@ -55,15 +55,19 @@ export default function DesFullShoppingCart({ item, dark }) {
                 <div
                   className={`xl:text-sm text-xs  font-normal ${
                     dark ? "text-emerald-500 " : " text-teal-600"
-                  }`}
+                  } 
+                  ${item.discount >0 ? 'block' : 'hidden'}`
+                }
                 >
                   
-                  {t('Discount')} {item.quantity}  €
+                   {item.discount > 0 ? t('Discount') + item.discount + '€' : ''}  
                 </div>
                 <div
                   className={`flex items-center gap-x-1  ${
                     dark ? "text-white" : "text-zinc-700"
-                  }`}
+                  }
+                  ${item.discount == 0 && 'mt-2'}
+                  `}
                 >
                   <div className="xl:text-xl text-lg font-semibold"> {(item.quantity * item.finalPrice).toFixed(2)}</div>
                   <div className="xl:text-sm text-xs  font-text-base"> €</div>
