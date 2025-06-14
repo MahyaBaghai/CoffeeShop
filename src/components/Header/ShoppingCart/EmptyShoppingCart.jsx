@@ -4,10 +4,10 @@ import { useNavigate } from 'react-router'
 
 export default function EmptyShoppingCart({ dark , closeShoppingCartInMobile}) {
   const { t } = useTranslation();
-  const navigate = useNavigate();
+  
 
   const goToProducts = () => {
-    navigate('/#products-section'); 
+     
     setTimeout(() => {
       const element = document.getElementById('products-section');
       if (element) {

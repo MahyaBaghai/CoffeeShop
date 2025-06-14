@@ -1,13 +1,13 @@
 import Logo from "../../../Icons/Logo";
 import LogoType from "../../../Icons/LogoType";
 import { HiXMark } from "react-icons/hi2";
-import { useNavigate } from 'react-router'
+
 
 export default function MobMenuHeader({dark ,closeMenuInMobile}) {
-   const navigate = useNavigate();
+   
 
     const goToHeader = () => {
-    navigate('/#Head-section'); 
+    
     setTimeout(() => {
       const element = document.getElementById('Head-section');
       if (element) {

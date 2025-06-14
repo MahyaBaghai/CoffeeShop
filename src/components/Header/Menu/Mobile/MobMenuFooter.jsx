@@ -4,12 +4,11 @@ import Sun from "../../../Icons/Sun";
 import ShopIcon from "../../../Icons/ShopIcon";
 import { useTranslation } from 'react-i18next'
 import LanguageSwitcher from '../../../LanguageSwitcher';
-import { useNavigate } from 'react-router'
+
 
 export default function MobMenuFooter({ dark, toggleTheme, closeMenuInMobile,openShoppingCartInMobile}) {
   const { t } = useTranslation();
-  const navigate = useNavigate();
-
+  
   const goToCart = () => {
     
     closeMenuInMobile()
