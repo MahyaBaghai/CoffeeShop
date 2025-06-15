@@ -4,12 +4,9 @@ import { useCart } from "./../../../../Context/CartContext"
 
 export default function DesShoppingCartHeader() {
   const { t } = useTranslation();
-  const { cartItems } = useCart();
+  const { cartItems, CartItemCounter } = useCart();
 
-  const CartItemCounter = ()=>{
-    return cartItems.length
-    
-   }
+  
   return (
     <>
       <div className="flex justify-between items-center text-xs xl:text-sm font-medium font-PoppinsMedium">

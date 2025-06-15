@@ -3,11 +3,10 @@ import MobMenuHeader from "./MobMenuHeader";
 import MobMenuBody from "./MobMenuBody";
 import MobMenuFooter from "./MobMenuFooter";
 import ShopIcon from "../../../Icons/ShopIcon";
-import { useCart } from './../../../../Context/CartContext'
+import { useCart } from "./../../../../Context/CartContext";
 
-export default function MobMenu({dark, toggleTheme}) {
-  
-const { closeMenuInMobile} = useCart();
+export default function MobMenu({ dark, toggleTheme }) {
+  const { closeMenuInMobile } = useCart();
   return (
     <>
       {/* open menu in mobile */}
@@ -25,10 +24,10 @@ const { closeMenuInMobile} = useCart();
           {/* menu */}
           <div className="[&_*]:text-base [&_*]:font-normal [&_*]:font-PoppinsRegular ">
             {/* header menu */}
-            <MobMenuHeader dark={dark}/>
+            <MobMenuHeader dark={dark} />
 
             {/* body menu */}
-            <MobMenuBody dark={dark}/>
+            <MobMenuBody dark={dark} />
 
             {/* footer menu */}
             <MobMenuFooter dark={dark} toggleTheme={toggleTheme} />

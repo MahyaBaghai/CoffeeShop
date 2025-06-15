@@ -10,6 +10,7 @@ export default defineConfig({
       include: ['**/*.jsx', '**/*.js'] 
     }) , 
     tailwindcss()],
-    // base: '/CoffeeShop/'
+     // add base: '/CoffeeShop/' for github deploy
+    base: '/CoffeeShop/'
 
 })

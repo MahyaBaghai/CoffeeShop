@@ -13,6 +13,7 @@ export default function MainShoppingCart({ dark }) {
     <>
       {/* shopping cart in desktop */}
       <div
+        
         className={`md:block absolute right-0 top-full w-80 xl:w-100 max-h-[calc(100vh-8rem)] overflow-y-auto overflow-x-hidden shadow-normal rounded-2xl border-t-[3px] border-orange-300 z-30 
         invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all ease-in-out delay-75
               ${dark ? "bg-zinc-700 " : "bg-white "} `}

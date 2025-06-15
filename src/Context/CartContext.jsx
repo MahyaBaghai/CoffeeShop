@@ -5,6 +5,9 @@ const CartContext = createContext();
 export function CartProvider({ children }) {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const [openShoppingCart, setOpenShoppingCart] = useState(false);
+  const [openSubMenu, setOpenSubMenu] = useState(false);
+  const [cartItems, setCartItems] = useState([]);
+  const [showNotification, setShowNotification] = useState(false);
 
   const openMenuInMobile = () => {
     setOpenMobileMenu(true);
@@ -16,19 +19,22 @@ export function CartProvider({ children }) {
 
   const openShoppingCartInMobile = () => {
     setOpenShoppingCart(true);
+    setShowNotification(false); 
   };
 
   const closeShoppingCartInMobile = () => {
     setOpenShoppingCart(false);
   };
 
-  const [openSubMenu, setOpenSubMenu] = useState(false);
 
   let toggleSubMenu = () => {
     setOpenSubMenu(!openSubMenu);
   };
 
-  const [cartItems, setCartItems] = useState([]);
+  const clearNotification =()=>{
+    setShowNotification(false)
+  }
+
 
   // add to shoppingCart
   const addToCart = (product) => {
@@ -47,7 +53,13 @@ export function CartProvider({ children }) {
         return [...prevItems, { ...product, quantity: 1 }];
       }
     });
+    setShowNotification(true);
   };
+// items in shopping cart
+  const CartItemCounter = ()=>{
+    return cartItems.length
+    
+   }
 
   // incerase product
   const increaseQuantity = (productId) => {
@@ -123,6 +135,7 @@ export function CartProvider({ children }) {
       }
     }, 50);
     closeMenuInMobile();
+    closeShoppingCartInMobile();
   };
 // go to best product section
   const goToBestProducts = () => {
@@ -177,6 +190,9 @@ export function CartProvider({ children }) {
         openSubMenu,
         toggleSubMenu,
         cartItems,
+        showNotification,
+        clearNotification,
+        CartItemCounter,
         addToCart,
         increaseQuantity,
         decreaseQuantity,
