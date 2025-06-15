@@ -1,7 +1,9 @@
 
 import { useTranslation } from 'react-i18next';
+import { useCart } from './../../../../Context/CartContext'
 export default function MobSubMenu({ dark }) {
   const { t } = useTranslation();
+  const { goToproducts , goToBestProducts, goToBanner,goToAccrssories} = useCart();
   return (
     <>
       <div
@@ -9,15 +11,11 @@ export default function MobSubMenu({ dark }) {
           [&_*]:active:text-orange-300 [&_*]:active:pl-2 
            ${dark ? "[&>*]:text-white" : "[&>*]:text-zinc-600"}`}
       >
-        <a href="#">{t('Premium')}</a>
-
-        <a href="#">{t('WorldClass')}</a>
-
-        <a href="#">{t('FirstClass')}</a>
-
-        <a href="#">{t('Capsules')}</a>
-
-        <a href="#">{t('ZinoCoffee')}</a>
+        <span onClick={goToproducts}>{t('NewestProducts')}</span>
+        <span onClick={goToBanner}>{t('BannerTypesOfCoffee')}</span>
+        <span onClick={goToBestProducts}>{t('BestProducts')}</span>
+        <span onClick={goToBanner}>{t('BannerPowders')}</span>
+        <span onClick={goToAccrssories}>{t('ServiceAccessoriesTitle')}</span>
       </div>
     </>
   );

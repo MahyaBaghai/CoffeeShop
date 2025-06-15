@@ -9,9 +9,9 @@ import MobSubMenu from "./MobSubMenu";
 import { useTranslation } from 'react-i18next';
 import { useCart } from './../../../../Context/CartContext' ;
 
-export default function MobMenuBody({ dark, toggleSubMenu, openSubMenu , closeMenuInMobile}) {
+export default function MobMenuBody({ dark}) {
    const { t } = useTranslation();
-   const { goToHome, goToClub, goToAbout, goToContact} = useCart();
+   const { goToHome, goToClub, goToAbout, goToContact, openSubMenu, toggleSubMenu} = useCart();
   return (
     <>
     <div

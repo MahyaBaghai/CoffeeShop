@@ -3,7 +3,7 @@ import { IoIosArrowUp } from "react-icons/io";
 import FooterSectionOne from "./FooterSectionOne";
 import FooterSectionTwo from "./FooterSectionTwo";
 import FooterSectionThree from "./FooterSectionThree";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 export default function MainFooter({ dark }) {
   const { t } = useTranslation();
@@ -41,12 +41,13 @@ export default function MainFooter({ dark }) {
                 </div>
               </div>
               <div className="font-PoppinsMedium">
-                UI/UX Design © 2025 <span className="text-orange-200"> Mahya Baghai</span> .
+                UI/UX Design © 2025{" "}
+                <span className="text-orange-200"> Mahya Baghai</span> .
               </div>
             </div>
 
             <div className="font-PoppinsRegular max-md:ml-10">
-               {t('FooterCopyRight')}
+              {t("FooterCopyRight")}
             </div>
           </div>
         </div>

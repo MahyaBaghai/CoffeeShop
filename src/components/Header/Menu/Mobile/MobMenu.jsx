@@ -3,19 +3,14 @@ import MobMenuHeader from "./MobMenuHeader";
 import MobMenuBody from "./MobMenuBody";
 import MobMenuFooter from "./MobMenuFooter";
 import ShopIcon from "../../../Icons/ShopIcon";
+import { useCart } from './../../../../Context/CartContext'
 
-
-export default function MobMenu({dark ,toggleTheme, closeMenuInMobile ,openShoppingCartInMobile}) {
-
-    const [openSubMenu, setOpenSubMenu] = useState(false);
-
-  let toggleSubMenu = () => {
-    setOpenSubMenu(!openSubMenu);
-  };
-
+export default function MobMenu({dark, toggleTheme}) {
+  
+const { closeMenuInMobile} = useCart();
   return (
     <>
-     {/* open menu in mobile */}
+      {/* open menu in mobile */}
 
       <div
         className={`md:hidden flex items-center justify-end fixed top-0 left-0 right-0 w-full h-16 px-4 sm:px-6 z-20
@@ -30,28 +25,18 @@ export default function MobMenu({dark ,toggleTheme, closeMenuInMobile ,openShopp
           {/* menu */}
           <div className="[&_*]:text-base [&_*]:font-normal [&_*]:font-PoppinsRegular ">
             {/* header menu */}
-            <MobMenuHeader dark={dark} closeMenuInMobile={closeMenuInMobile} />
+            <MobMenuHeader dark={dark}/>
 
             {/* body menu */}
-            <MobMenuBody
-              dark={dark}
-              toggleSubMenu={toggleSubMenu}
-              openSubMenu={openSubMenu}
-              closeMenuInMobile={closeMenuInMobile}
-            />
+            <MobMenuBody dark={dark}/>
 
             {/* footer menu */}
-            <MobMenuFooter 
-            dark={dark} 
-            toggleTheme={toggleTheme} 
-            closeMenuInMobile={closeMenuInMobile} 
-             openShoppingCartInMobile={openShoppingCartInMobile}/>
+            <MobMenuFooter dark={dark} toggleTheme={toggleTheme} />
           </div>
         </div>
 
         {/* overlay */}
         <div
-          
           onClick={closeMenuInMobile}
           className={`w-full min-h-screen z-30 fixed top-0 right-0 bottom-0 transition-all duration-300 bg-black/40`}
         ></div>
@@ -66,5 +51,5 @@ export default function MobMenu({dark ,toggleTheme, closeMenuInMobile ,openShopp
         </div>
       </div>
     </>
-  )
+  );
 }

@@ -6,7 +6,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import { Navigation } from "swiper/modules";
 
 export default function BestProduct({ dark }) {
@@ -36,15 +36,13 @@ export default function BestProduct({ dark }) {
 
   return (
     <>
-      <section className="@container">
+      <section id="best-products-section" className="@container">
         <div className="@8xl:w-[1260px] @8xl:mx-auto @3xl:mx-10 mx-4">
           {/* title */}
           <div className={`${dark ? "text-white" : "text-zinc-700"}`}>
-            <div className="sectionTitle ">  {t('BestProducts')} </div>
+            <div className="sectionTitle "> {t("BestProducts")} </div>
             <div className="flex justify-between items-center gap-x-1 md:pb-12 pb-6">
-              <span className="sectionSubtitle">
-                 {t('BestCoffeeLovers')}
-              </span>
+              <span className="sectionSubtitle">{t("BestCoffeeLovers")}</span>
               <div className="flex gap-3 md:gap-5">
                 <button
                   className={`md:w-11 md:h-11 w-9 h-9  rounded-full flex items-center justify-center shadow-normal ${
@@ -56,9 +54,7 @@ export default function BestProduct({ dark }) {
                   <IoIosArrowBack
                     onClick={handlePrev}
                     className={`md:w-6.5 md:h-6.5 w-5 h-5 cursor-pointer mySwiper prev ${
-                      dark
-                        ? "text-white  "
-                        : "text-zinc-700"
+                      dark ? "text-white  " : "text-zinc-700"
                     }`}
                   />
                 </button>
@@ -73,16 +69,13 @@ export default function BestProduct({ dark }) {
                   <IoIosArrowForward
                     onClick={handleNext}
                     className={`md:w-6.5 md:h-6.5 w-5 h-5 cursor-pointer mySwiper ${
-                      dark
-                        ? "text-white "
-                        : "text-zinc-700"
+                      dark ? "text-white " : "text-zinc-700"
                     }`}
                   />
                 </button>
               </div>
             </div>
           </div>
-        
 
           <Swiper
             slidesPerView={2}
@@ -119,8 +112,6 @@ export default function BestProduct({ dark }) {
               </SwiperSlide>
             ))}
           </Swiper>
-
-          
         </div>
       </section>
     </>

@@ -5,7 +5,7 @@ import { useCart } from './../../../../Context/CartContext'
 
 export default function DesFullShoppingCart({ item, dark }) {
   const { t } = useTranslation();
-   const { increaseQuantity, decreaseQuantity} = useCart();
+  const { increaseQuantity, decreaseQuantity} = useCart();
 
    
   return (

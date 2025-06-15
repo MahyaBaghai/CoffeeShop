@@ -6,9 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 export default function Products({ dark }) {
   const { t } = useTranslation();
-
   const [productsData, setProductsData] = useState(productsInfo);
-
   const calculatePrice = (price, discount) => {
     if (discount > 0) {
       return price * (1 - discount / 100);

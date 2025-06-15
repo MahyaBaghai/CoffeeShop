@@ -129,11 +129,12 @@ export default function Cards({
                 }}
                 className="xs:w-7 xs:h-7 2xs:w-6 2xs:h-6 w-5 h-5 cursor-pointer text-gray-400 hover:text-white active:text-white"
               />
-              
             </div>
             <LiaExchangeAltSolid
               className={` xs:w-6 xs:h-6 2xs:w-5 2xs:h-5 w-4 h-4 cursor-pointer text-gray-400 ${
-                dark ? "hover:text-emerald-500 active:text-emerald-500" : "hover:text-teal-600 active:text-teal-600"
+                dark
+                  ? "hover:text-emerald-500 active:text-emerald-500"
+                  : "hover:text-teal-600 active:text-teal-600"
               }`}
             />
           </div>

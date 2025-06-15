@@ -3,11 +3,10 @@ import { useTranslation } from 'react-i18next';
 
 export default function CategoryItems({ dark }) {
   const { t } = useTranslation();
-
   const items= item
   return (
     <>
-      <section className="@container">
+      <section id="accrssories-section" className="@container">
         <div className="@8xl:w-[1260px] @8xl:mx-auto @3xl:mx-10 mx-4">
           <div className="flex flex-wrap  lg:justify-between justify-center lg:gap-x-9 md:gap-x-18 sm:gap-x-19 xs:gap-x-12 2xs:gap-x-8 gap-x-5  gap-y-4 mb-10 2xs:mb-15 md:mb-18 lg:mb-25">
             {items.map((item) => (

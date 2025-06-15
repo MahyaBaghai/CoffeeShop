@@ -2,23 +2,26 @@ import { SlLocationPin } from "react-icons/sl";
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { LuPhone } from "react-icons/lu";
 import ContactBtn from "../Buttons/ContactBtn";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 export default function FooterSectionThree() {
   const { t } = useTranslation();
   return (
     <>
-      <div id="contact-section" className="flex flex-col  flex-wrap items-start lg:pt-22 pt-12 max-lg:ml-3 ">
+      <div
+        id="contact-section"
+        className="flex flex-col  flex-wrap items-start lg:pt-22 pt-12 max-lg:ml-3 "
+      >
         {/* title  */}
         <div className="flex flex-col">
           <div className="font-PoppinsMedium text-xl font-medium text-white mb-7">
-             {t('FooterSec3Title')}
+            {t("FooterSec3Title")}
           </div>
           {/* address */}
           <div className=" flex text-gray-300 gap-x-2 mb-5">
             <SlLocationPin className="w-6 h-6 shrink-0" />
             <div className="font-PoppinsRegular font-normal xl:text-base text-sm">
-              {t('FooterSec3address')}
+              {t("FooterSec3address")}
             </div>
           </div>
           {/* contact */}
@@ -26,7 +29,9 @@ export default function FooterSectionThree() {
             {/* email */}
             <div className="flex gap-x-2 text-orange-300">
               <HiOutlineEnvelope className="w-6 h-6" />
-              <span className="font-PoppinsRegular cursor-pointer">info@Coffee.com</span>
+              <span className="font-PoppinsRegular cursor-pointer">
+                info@Coffee.com
+              </span>
             </div>
             {/* telephone */}
             <div className="flex gap-6">

@@ -1,6 +1,5 @@
 import { MdKeyboardArrowRight } from "react-icons/md";
 import BlogCards from "../components/Cards/BlogCards";
-import blogItems from "../Utility/BlogItems";
 import { useTranslation } from "react-i18next";
 
 export default function Blog({ dark }) {

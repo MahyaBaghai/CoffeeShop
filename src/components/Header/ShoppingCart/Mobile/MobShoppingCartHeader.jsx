@@ -1,8 +1,9 @@
 import { HiXMark } from "react-icons/hi2";
 import { useTranslation } from 'react-i18next';
-
-export default function MobShoppingCartHeader({dark, closeShoppingCartInMobile}) {
+import { useCart } from './../../../../Context/CartContext'
+export default function MobShoppingCartHeader({dark}) {
   const { t } = useTranslation();
+  const { closeShoppingCartInMobile} = useCart();
   return (
     <>
     <div

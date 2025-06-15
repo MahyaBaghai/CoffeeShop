@@ -1,12 +1,10 @@
 import { RxHamburgerMenu } from "react-icons/rx";
 import LogoType from "../../../Icons/LogoType";
 import ShopIcon from "../../../Icons/ShopIcon";
+import { useCart } from './../../../../Context/CartContext'
 
-export default function MobNavbar({
-  dark,
-  openMenuInMobile,
-  openShoppingCartInMobile,
-}) {
+export default function MobNavbar({dark}) {
+  const {openMenuInMobile, openShoppingCartInMobile,} = useCart();
   return (
     <>
       

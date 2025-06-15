@@ -4,13 +4,12 @@ import Sun from "../../../Icons/Sun";
 import ShopIcon from "../../../Icons/ShopIcon";
 import { useTranslation } from 'react-i18next'
 import LanguageSwitcher from '../../../LanguageSwitcher';
+import { useCart } from './../../../../Context/CartContext'
 
-
-export default function MobMenuFooter({ dark, toggleTheme, closeMenuInMobile,openShoppingCartInMobile}) {
+export default function MobMenuFooter({ dark, toggleTheme}) {
   const { t } = useTranslation();
-  
+  const { openShoppingCartInMobile,closeMenuInMobile } = useCart();
   const goToCart = () => {
-    
     closeMenuInMobile()
     openShoppingCartInMobile()
   };

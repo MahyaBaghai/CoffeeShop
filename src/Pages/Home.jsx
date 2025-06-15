@@ -1,4 +1,3 @@
-import { useState } from "react";
 import DesMainHeader from "../components/Header/DesMainHeader";
 import MobMainHeader from "../components/Header/MobMainHeader";
 import Curve from "../components/Icons/Curve";

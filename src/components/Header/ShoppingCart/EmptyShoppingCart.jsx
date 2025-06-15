@@ -1,22 +1,10 @@
 import { PiShoppingCartSimple } from "react-icons/pi";
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router'
-
-export default function EmptyShoppingCart({ dark , closeShoppingCartInMobile}) {
+import { useCart } from './../../../Context/CartContext'
+export default function EmptyShoppingCart({ dark }) {
   const { t } = useTranslation();
+  const { goToproducts } = useCart();
   
-
-  const goToProducts = () => {
-     
-    setTimeout(() => {
-      const element = document.getElementById('products-section');
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 50); 
-    
-  };
-
   return (
     <>
       {/* content empty shopping cart section */}
@@ -38,7 +26,7 @@ export default function EmptyShoppingCart({ dark , closeShoppingCartInMobile}) {
 
         <div className="mx-5 ">
           <button
-            onClick={goToProducts}
+            onClick={goToproducts}
             className={` xl:w-64 md:w-54 w-47 h-14 rounded-xl font-PoppinsMedium xl:text-xl text-lg font-normal text-white text-center
              ${
                dark

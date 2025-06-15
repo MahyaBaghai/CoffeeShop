@@ -2,10 +2,10 @@ import Discovery from "../components/Icons/Discovery";
 import Activity from "../components/Icons/Activity";
 import TicketStar from "../components/Icons/TicketStar";
 import { IoIosArrowForward } from "react-icons/io";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 export default function CoffeeClub() {
-   const { t } = useTranslation();
+  const { t } = useTranslation();
   return (
     <>
       <section id="club-section" className="@container">
@@ -20,10 +20,10 @@ export default function CoffeeClub() {
               />
               <div className="italic flex flex-col md:gap-2 gap-0.5">
                 <div className="font-VolkhovBold font-bold lg:text-4xl xmd:text-3xl 2xs:text-2xl text-xl">
-                   {t('ClubCoffee')}
+                  {t("ClubCoffee")}
                 </div>
                 <div className="font-VolkhovRegular font-light xl:text-xl lg:text-lg md:text-sm sm:text-base 2xs:text-sm text-xs ">
-                  {t('ClubQuestion')}
+                  {t("ClubQuestion")}
                 </div>
               </div>
             </div>
@@ -33,38 +33,34 @@ export default function CoffeeClub() {
               <div className="flex xl:gap-5 lg:gap-3 gap-2">
                 <div className="clubIconBox">
                   <Discovery className="clubIcon" />
-                   <div className="clubIconDis">
-                    {t('ClubSpin')}</div>
+                  <div className="clubIconDis">{t("ClubSpin")}</div>
                 </div>
                 <div className="clubIconBox">
                   <Activity className="clubIcon" />
-                  <div className="clubIconDis">
-                    {t('ClubChallenges')}
-                    
-                    </div>
+                  <div className="clubIconDis">{t("ClubChallenges")}</div>
                 </div>
                 <div className="clubIconBox">
                   <TicketStar className="clubIcon" />
-                  <div className="clubIconDis">
-                    {t('ClubRewards')}
-                  </div>
+                  <div className="clubIconDis">{t("ClubRewards")}</div>
                 </div>
               </div>
 
               {/* punkt */}
-                    <div className="flex flex-col items-center justify-center text-white font-PoppinsMedium">
-                        <div className=" font-semibold xl:text-4xl lg:text-3xl 2xs:text-2xl text-xl">
-                          542</div>
-                        <div className="font-normal text-center lg:text-base text-xs">
-                          {t('ClubPoints')}</div>
-                        <div className="flex items-center justify-center lg:w-35 lg:h-9 sm:w-28 sm:h-9 md:h-7 md:w-23 xs:w-22 2xs:w-20 w-18 h-7 bg-linear-to-r from-orange-300 to-orange-200 rounded-full mt-2 cursor-pointer">
-                            <div className="font-normal lg:text-sm text-xs ">
-                              {t('ClubClaim')}</div>
-                          
-                            <IoIosArrowForward className="md:w-4 md:h-4 w-3 h-3"/>
-                        </div>
+              <div className="flex flex-col items-center justify-center text-white font-PoppinsMedium">
+                <div className=" font-semibold xl:text-4xl lg:text-3xl 2xs:text-2xl text-xl">
+                  542
+                </div>
+                <div className="font-normal text-center lg:text-base text-xs">
+                  {t("ClubPoints")}
+                </div>
+                <div className="flex items-center justify-center lg:w-35 lg:h-9 sm:w-28 sm:h-9 md:h-7 md:w-23 xs:w-22 2xs:w-20 w-18 h-7 bg-linear-to-r from-orange-300 to-orange-200 rounded-full mt-2 cursor-pointer">
+                  <div className="font-normal lg:text-sm text-xs ">
+                    {t("ClubClaim")}
+                  </div>
 
-                    </div>
+                  <IoIosArrowForward className="md:w-4 md:h-4 w-3 h-3" />
+                </div>
+              </div>
             </div>
           </div>
         </div>

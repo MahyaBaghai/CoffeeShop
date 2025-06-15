@@ -1,5 +1,5 @@
 import "./index.css";
-import 'swiper/css';
+import "swiper/css";
 import Routers from "./Routes/Routers";
 import { useState } from "react";
 
@@ -11,10 +11,13 @@ function App() {
   };
   return (
     <>
-    <div className={`@container min-h-screen min-w-[380px] ${dark ? " bg-zinc-800" : "bg-gray-100"}`}>
-
-      <Routers dark={dark} toggleTheme={toggleTheme}/>
-    </div>
+      <div
+        className={`@container min-h-screen min-w-[380px] ${
+          dark ? " bg-zinc-800" : "bg-gray-100"
+        }`}
+      >
+        <Routers dark={dark} toggleTheme={toggleTheme} />
+      </div>
     </>
   );
 }
